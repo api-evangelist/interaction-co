@@ -1,0 +1,62 @@
+generated: '2026-10-24'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 4
+  own: 2
+  other_domain: 2
+  platform: 0
+  roles:
+  - api
+  - other
+  - website
+hosts:
+- host: api.interaction.co
+  found_by:
+  - probed
+  - site-links
+  - namespace-probe
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  title: Poke – Chat with Poke
+  status: 200
+  registrable_domain: interaction.co
+  role: api
+  relation: own
+- host: api.poke.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: poke.com
+  role: api
+  relation: other-domain
+- host: interaction.co
+  found_by:
+  - pointer
+  - probed
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - Website
+  serves:
+  - hosting
+  vendor: vercel
+  registrable_domain: interaction.co
+  role: website
+  relation: own
+- host: poke.com
+  found_by:
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: poke.com
+  role: other
+  relation: other-domain

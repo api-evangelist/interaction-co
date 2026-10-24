@@ -1,27 +1,66 @@
 aid: interaction-co
+
 name: The Interaction Company Of California
-description: 'The Interaction Company Of California is a company surfaced via the API Evangelist harvest
-  backlog (source: vc-portfolio; backed by earlybird, general-catalyst) and added to the network as a
-  stub for full-pipeline profiling.'
+
+description: "The Interaction Company of California builds innovative digital experiences, currently focusing on the Poke.com platform. Based in California, the team invites developers and partners to engage via their website, job board, and social channels. Contact is available through hi@interaction.co for collaborations, press inquiries at press@interaction.co, and they maintain an active presence on X. Their mission is to create interactive solutions that connect users across services."
+
 url: https://raw.githubusercontent.com/api-evangelist/interaction-co/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:vc-portfolio
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-24 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-24'
+
 modified: '2026-10-24'
+
 tags:
 - Company
-apis: []
+- API
+- Platform
+- Developer
+- Interaction
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
+common:
+- type: LLMsTxt
+  url: llms/interaction-co-llms.txt
+- type: Hosts
+  url: hosts/interaction-co-hosts.yml
+- type: Vendors
+  url: vendors/interaction-co-vendors.yml
+- type: DomainSecurity
+  url: security/interaction-co-domain-security.yml
+- type: Website
+  url: https://interaction.co
+
+apis: []
+
 x-backed-by:
 - earlybird
 - general-catalyst
-common:
-- type: Website
-  url: https://interaction.co
+
+x-coverage:
+  state: unreadable
+  reason: js-rendered-docs
+  detail: Documentation at https://poke.com/docs returns HTML without a machine‑readable spec.
+  evidence:
+    - url: https://poke.com/docs
+      status: 200
+  checked: '2026-10-24'
+x-enrichment:
+  date: '2026-10-24'
+  status: enriched
+  artifacts_added: 8
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
